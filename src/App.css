@@ -1,0 +1,117 @@
+/* Layout stranice */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: gainsboro;
+}
+/* Zaglavlje */
+.App-header {
+  background-color: rgb(13, 157, 78);
+  width: 100%;
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* Lista poruka, između sebe*/
+.Messages-list {
+  padding: 20px 0;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+}
+/* Flexbox i razmak između poruka*/
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+/*Container za listu poruka*/
+.message-list-wrap {
+  padding: 20px 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+}
+/* Izgled avatara */
+.Messages-message > .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.Message-content > .username {
+  display: block;
+  color: rgb(42, 41, 41);
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: rgb(92, 136, 218);
+  color: white;
+  display: inline-block;
+}
+
+.currentMember > .Message-content .text {
+  background-color: rgb(87, 44, 69);
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid rgb(13, 157, 78);
+  flex-grow: 1;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: rgb(13, 157, 78);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  text-shadow: #262626;
+}
